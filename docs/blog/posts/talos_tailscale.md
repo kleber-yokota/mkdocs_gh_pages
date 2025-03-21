@@ -18,7 +18,7 @@ tags:
 A **Virtual Private Cloud (VPC)** is an isolated, private network within a public cloud provider or an on-premises environment. It allows secure communication between resources without exposing them to the public internet.
 
 ### **Why Companies Use VPCs?**
-
+<!-- more -->
 - **Security:** Resources inside a VPC are **isolated** and protected from external access.
     
 - **Private Networking:** Services can communicate **internally** without needing public IPs.
