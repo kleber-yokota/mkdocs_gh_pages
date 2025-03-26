@@ -11,7 +11,9 @@ tags:
   - tailscale
 ---
 
-# Talos - Adding Features and Tips
+# Tailscale Operator
+
+## motivation
 
 I’m setting up a homelab on a single machine, and ensuring it is both secure and part of the Tailscale network is crucial. The goal is to create an environment that closely resembles a production setup. By leveraging Tailscale, I can secure all the services in my homelab while maintaining a network that mimics the connectivity and security requirements of real-world production systems. This setup ensures that my infrastructure remains protected while providing the flexibility and scalability that I might need as the homelab evolves.
 
