@@ -13,15 +13,15 @@ tags:
 
 # Tailscale Operator
 
-## Motivation
+## **Motivation**
 
 I’m setting up a homelab on a single machine, and ensuring it is both secure and part of the Tailscale network is crucial. The goal is to create an environment that closely resembles a production setup. By leveraging Tailscale, I can secure all the services in my homelab while maintaining a network that mimics the connectivity and security requirements of real-world production systems. This setup ensures that my infrastructure remains protected while providing the flexibility and scalability that I might need as the homelab evolves.
 
 <!-- more -->
 
-# Setup
+## Setup
 
-## Helm To install Helm
+### **Helm To install Helm**
 
 To install Helm, run the following command:
 
@@ -43,7 +43,7 @@ helm repo update
 
 It's always a good idea to keep the files up to date.
 
-## Tailscale
+## **Tailscale**
 
 In the Tailscale admin console, add the following part to the `Access Control` section:
 
@@ -56,9 +56,9 @@ In the Tailscale admin console, add the following part to the `Access Control` s
 
 After that, go to `Settings` -> `OAuth Client` to generate an OAuth client with write access for `Devices Core` and `Auth Keys`. Add the tag `tag:k8s-operator` for both.
 
-# Installation
+## **Installation**
 
-## Tailscale with Helm
+### **Tailscale with Helm**
 
 First, create the namespace and apply the configuration:
 
@@ -69,7 +69,7 @@ kubectl label namespace tailscale pod-security.kubernetes.io/enforce=privileged
 
 The first command creates the namespace, which is how Kubernetes organizes and applies group configurations. The second command enforces privileged mode in the namespace, which is required since Talos has strict security settings and doesn't allow certain privileges that Tailscale needs.
 
-### Why This Is Necessary:
+### **Why This Is Necessary:**
 
 Talos enforces strict security policies, and for the Tailscale operator to function correctly, it requires certain privileges that are restricted in default configurations. The `pod-security.kubernetes.io/enforce=privileged` label ensures that the Tailscale operator has the necessary permissions to run.
 
@@ -87,13 +87,13 @@ helm upgrade \
   --wait
 ```
 
-### Explanation:
+### **Explanation:**
 
 This command installs the Tailscale operator in the `tailscale` namespace. It configures the OAuth client ID and secret, which are necessary for authentication and authorization with Tailscale. The `--wait` flag ensures that Helm waits until the deployment is complete before returning.
 
 Check if the `tailscale-operator` is connected on the machines.
 
-## Final Test: Verify NGINX IP in Tailscale
+## **Final Test: Verify NGINX IP in Tailscale**
 
 Use the following configuration to expose the NGINX service with Tailscale:
 
@@ -144,7 +144,7 @@ kubectl apply -f tailscale_ingress.yaml  -n demo-tailscale
 
 This configuration allows the Tailscale operator to detect the service and assign an IP within the Tailscale VPC, enabling secure communication across the network.
 
-### Key Point:
+### **Key Point:**
 
 Don’t forget to include this annotation in the service:
 
