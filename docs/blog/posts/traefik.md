@@ -19,7 +19,7 @@ Traefik is a reverse proxy, an alternative to Nginx. I found it interesting and 
 Since Tailscale offers MagicDNS, which allows all connected devices to share a common domain and subdomain, I can leverage my own DNS and use a reverse proxy to simplify access. This setup also enables me to obtain TLS certificates for better security.
 
 ## Installing Traefik
-
+<!-- more -->
 ```bash
 helm repo add traefik https://traefik.github.io/charts
 helm repo update
