@@ -48,6 +48,7 @@ plugins:
         - Personal
         - Infrastructure
         - Data
+        - Datastack
 
   - tags:
       tags_file: tags.md
