@@ -49,6 +49,7 @@ plugins:
         - Infrastructure
         - Data
         - Datastack
+        - POC
 
   - tags:
       tags_file: tags.md

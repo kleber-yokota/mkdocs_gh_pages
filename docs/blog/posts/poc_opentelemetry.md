@@ -1,12 +1,29 @@
+---
+draft: false
+date: 2024-04-28
+categories:
+  - Infrastructure
+  - Datastack
+  - POC
+tags:
+  - docker
+  - docker-compose
+  - POC
+  - telemetry
+---
+
 # Proof of Concept: OpenTelemetry with Python and Docker
 
 This project is a **technical Proof of Concept (PoC)** to explore how [OpenTelemetry](https://opentelemetry.io/) works for tracing, logging, and metrics collection in Python applications.  
 The goal is to understand its architecture and capabilities to enable deeper future analyses and observability improvements.
+[github](https://github.com/kleber-yokota/poc-opentelemtry)
 
 ## Why This PoC?
 
 Modern systems require **deep visibility** into application behavior to detect issues, optimize performance, and improve reliability.  
 This PoC was created to:
+
+<!-- more -->
 
 - **Learn** how OpenTelemetry collects and exports telemetry data (traces, metrics, logs).
 - **Experiment** with local telemetry ingestion and visualization using Grafana's **otel-lgtm** stack.
