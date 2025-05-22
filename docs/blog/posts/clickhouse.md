@@ -27,7 +27,7 @@ To deploy ClickHouse on my Kubernetes cluster, I use the **Altinity** distributi
 ### Step 1 — Install the Operator
 
 Run the following command to install the Altinity Operator on Kubernetes:
-
+<!-- more -->
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/Altinity/clickhouse-operator/master/deploy/operator/clickhouse-operator-install-bundle.yaml
 ```
