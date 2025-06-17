@@ -50,6 +50,7 @@ plugins:
         - Data
         - Datastack
         - POC
+        - LLM
 
   - tags:
       tags_file: tags.md
