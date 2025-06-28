@@ -88,7 +88,7 @@ import openlit
 openlit.init()
 ```
 
-it starts capturing model interactions automatically — including OpenAI, Anthropic, Qwen, LangChain, LangGraph, and even vector databases like Pinecone. It logs:
+it starts capturing model interactions automatically — including Ollama, Qwen, LangChain, LangGraph.It logs:
 
 - LLM inputs and outputs,
 - token usage,
